@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#fafafa" },
     { media: "(prefers-color-scheme: dark)", color: "#151515" },
-    { media: "(prefers-color-scheme: nanciee)", color: "#a7c957" },
+    { media: "(prefers-color-scheme: nanciee)", color: "#9c6644" },
   ],
   appleWebApp: {
     title: "Nanciee's Pet",
