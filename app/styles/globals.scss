@@ -44,12 +44,39 @@
   }
 }
 
+@mixin nanciee {
+  --theme: nanciee;
+
+  /* color */
+  --white: #344e41;
+  --black: #fefae0;
+  --gray: #081c15;
+  --primary: #dda15e;
+  --second: #588157;
+  --hover-color: #b7e4c7;
+
+  --bar-color: #fefae0;
+
+  --border-in-light: 1px solid #a1cca5;
+
+  --theme-color: var(--gray);
+
+  div:not(.no-dark) > svg {
+    filter: invert(0.5);
+  }
+
+}
+
 .light {
   @include light;
 }
 
 .dark {
   @include dark;
+}
+
+.nanciee {
+  @include nanciee;
 }
 
 .mask {

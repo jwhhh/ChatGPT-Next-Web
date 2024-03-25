@@ -6,6 +6,7 @@ import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
+import PromptIcon from "../icons/prompt.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import DeleteIcon from "../icons/delete.svg";
@@ -155,13 +156,13 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          NextChat
+          Nanciee's Pet
         </div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          做點自己喜歡的事情
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <PromptIcon />
         </div>
       </div>
 
