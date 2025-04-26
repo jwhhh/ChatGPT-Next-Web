@@ -76,6 +76,7 @@ const cn = {
         light: "亮色模式",
         dark: "深色模式",
         nanciee: "南希主題",
+        "nanciee-dark": "南希主題深色",
       },
       Prompt: "快捷指令",
       Masks: "所有面具",
