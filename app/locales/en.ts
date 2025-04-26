@@ -76,6 +76,7 @@ const en: LocaleType = {
         auto: "Auto",
         light: "Light Theme",
         dark: "Dark Theme",
+        nanciee: "Nanciee Theme",
       },
       Prompt: "Prompts",
       Masks: "Masks",

@@ -88,11 +88,14 @@ export function useSwitchTheme() {
   useEffect(() => {
     document.body.classList.remove("light");
     document.body.classList.remove("dark");
+    document.body.classList.remove("nanciee");
 
     if (config.theme === "dark") {
       document.body.classList.add("dark");
     } else if (config.theme === "light") {
       document.body.classList.add("light");
+    } else if (config.theme === "nanciee") {
+      document.body.classList.add("nanciee");
     }
 
     const metaDescriptionDark = document.querySelector(
@@ -100,6 +103,9 @@ export function useSwitchTheme() {
     );
     const metaDescriptionLight = document.querySelector(
       'meta[name="theme-color"][media*="light"]',
+    );
+    const metaDescriptionNanciee = document.querySelector(
+      'meta[name="theme-color"][media*="nanciee"]',
     );
 
     if (config.theme === "auto") {

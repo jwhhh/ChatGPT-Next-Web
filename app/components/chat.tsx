@@ -514,7 +514,7 @@ export function ChatActions(props: {
   const theme = config.theme;
 
   function nextTheme() {
-    const themes = [Theme.Auto, Theme.Light, Theme.Dark];
+    const themes = [Theme.Auto, Theme.Light, Theme.Dark, Theme.Nanciee];
     const themeIndex = themes.indexOf(theme);
     const nextIndex = (themeIndex + 1) % themes.length;
     const nextTheme = themes[nextIndex];
