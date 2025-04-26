@@ -91,7 +91,7 @@
 }
 
 @mixin nanciee {
-  color-scheme: dark;
+  color-scheme: nanciee;
   --color-prettylights-syntax-comment: #8b949e;
   --color-prettylights-syntax-constant: #79c0ff;
   --color-prettylights-syntax-entity: #d2a8ff;
@@ -136,6 +136,53 @@
   --color-danger-fg: #f85149;
 }
 
+@mixin nanciee-dark {
+  color-scheme: nanciee-dark;
+
+  --color-prettylights-syntax-comment: #6b6f7b; // Darker version of #8b949e
+  --color-prettylights-syntax-constant: #5a9bdc; // Darker version of #79c0ff
+  --color-prettylights-syntax-entity: #a07bdc; // Darker version of #d2a8ff
+  --color-prettylights-syntax-storage-modifier-import: #a3a3a3; // Darker version of #c9d1d9
+  --color-prettylights-syntax-entity-tag: #5cbf5c; // Darker version of #7ee787
+  --color-prettylights-syntax-keyword: #d45a5a; // Darker version of #ff7b72
+  --color-prettylights-syntax-string: #7bb8e0; // Darker version of #a5d6ff
+  --color-prettylights-syntax-variable: #d48a4a; // Darker version of #ffa657
+  --color-prettylights-syntax-brackethighlighter-unmatched: #c03a3a; // Darker version of #f85149
+  --color-prettylights-syntax-invalid-illegal-text: #d8e2f0; // Darker version of #f0f6fc
+  --color-prettylights-syntax-invalid-illegal-bg: #6a1014; // Darker version of #8e1519
+  --color-prettylights-syntax-carriage-return-text: #d8e2f0; // Darker version of #f0f6fc
+  --color-prettylights-syntax-carriage-return-bg: #8e1b1f; // Darker version of #b62324
+  --color-prettylights-syntax-string-regexp: #5cbf5c; // Darker version of #7ee787
+  --color-prettylights-syntax-markup-list: #d2a84a; // Darker version of #f2cc60
+  --color-prettylights-syntax-markup-heading: #174b9e; // Darker version of #1f6feb
+  --color-prettylights-syntax-markup-italic: #a3a3a3; // Darker version of #c9d1d9
+  --color-prettylights-syntax-markup-bold: #a3a3a3; // Darker version of #c9d1d9
+  --color-prettylights-syntax-markup-deleted-text: #e6b0b0; // Darker version of #ffdcd7
+  --color-prettylights-syntax-markup-deleted-bg: #4d0408; // Darker version of #67060c
+  --color-prettylights-syntax-markup-inserted-text: #8fdc9a; // Darker version of #aff5b4
+  --color-prettylights-syntax-markup-inserted-bg: #022a10; // Darker version of #033a16
+  --color-prettylights-syntax-markup-changed-text: #e6c89a; // Darker version of #ffdfb6
+  --color-prettylights-syntax-markup-changed-bg: #4a1702; // Darker version of #5a1e02
+  --color-prettylights-syntax-markup-ignored-text: #a3a3a3; // Darker version of #c9d1d9
+  --color-prettylights-syntax-markup-ignored-bg: #0d3e8a; // Darker version of #1158c7
+  --color-prettylights-syntax-meta-diff-range: #a07bdc; // Darker version of #d2a8ff
+  --color-prettylights-syntax-brackethighlighter-angle: #6b6f7b; // Darker version of #8b949e
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #3a3f48; // Darker version of #484f58
+  --color-prettylights-syntax-constant-other-reference-link: #7bb8e0; // Darker version of #a5d6ff
+  --color-fg-default: #f7e0d3; // Darker version of #7f5539
+  --color-fg-muted: #6b6f7b; // Darker version of #8b949e
+  --color-fg-subtle: #565c65; // Darker version of #6e7681
+  --color-canvas-default: #785d13; // Darker version of transparent
+  --color-canvas-subtle: #0d1117; // Darker version of #161b22
+  --color-border-default: #24292f; // Darker version of #30363d
+  --color-border-muted: #1a1e23; // Darker version of #21262d
+  --color-neutral-muted: rgba(80, 86, 94, 0.4); // Darker version of rgba(110, 118, 129, 0.4)
+  --color-accent-fg: #3a8bdc; // Darker version of #58a6ff
+  --color-accent-emphasis: #174b9e; // Darker version of #1f6feb
+  --color-attention-subtle: rgba(214, 192, 150, 0.877); // Darker version of rgba(187, 128, 9, 0.15)
+  --color-danger-fg: #c03a3a; // Darker version of #f85149
+}
+
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -159,13 +206,17 @@
   @include nanciee;
 }
 
+.nanciee-dark {
+  @include nanciee-dark;
+}
+
 :root {
-  @include light;
+  @include nanciee;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @include dark;
+    @include nanciee-dark;
   }
 }
 

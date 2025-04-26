@@ -89,6 +89,7 @@ export function useSwitchTheme() {
     document.body.classList.remove("light");
     document.body.classList.remove("dark");
     document.body.classList.remove("nanciee");
+    document.body.classList.remove("nanciee-dark");
 
     if (config.theme === "dark") {
       document.body.classList.add("dark");
@@ -96,6 +97,8 @@ export function useSwitchTheme() {
       document.body.classList.add("light");
     } else if (config.theme === "nanciee") {
       document.body.classList.add("nanciee");
+    } else if (config.theme === "nanciee-dark") {
+      document.body.classList.add("nanciee-dark");
     }
 
     const metaDescriptionDark = document.querySelector(
@@ -107,14 +110,21 @@ export function useSwitchTheme() {
     const metaDescriptionNanciee = document.querySelector(
       'meta[name="theme-color"][media*="nanciee"]',
     );
+    const metaDescriptionNancieeDark = document.querySelector(
+      'meta[name="theme-color"][media*="nanciee-dark"]',
+    );
 
     if (config.theme === "auto") {
       metaDescriptionDark?.setAttribute("content", "#151515");
       metaDescriptionLight?.setAttribute("content", "#fafafa");
+      metaDescriptionNanciee?.setAttribute("content", "#151515");
+      metaDescriptionNancieeDark?.setAttribute("content", "#fafafa");
     } else {
       const themeColor = getCSSVar("--theme-color");
       metaDescriptionDark?.setAttribute("content", themeColor);
       metaDescriptionLight?.setAttribute("content", themeColor);
+      metaDescriptionNanciee?.setAttribute("content", themeColor);
+      metaDescriptionNancieeDark?.setAttribute("content", themeColor);
     }
   }, [config.theme]);
 }

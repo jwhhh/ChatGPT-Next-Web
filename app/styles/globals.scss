@@ -64,7 +64,28 @@
   div:not(.no-dark) > svg {
     filter: invert(0.5);
   }
+}
 
+@mixin nanciee-dark {
+  --theme: nanciee-dark;
+
+  /* color */
+  --white: #4d3d14; // Darker version of #ffeedd
+  --black: #f8e5d9; // Darker version of #9c6644
+  --gray: #854b32;  // Darker version of #ede0d4
+  --primary: #b38633; // Darker version of #ffd166
+  --second: #ce9961;  // Darker version of #f5d491
+  --hover-color: #a1682f; // Darker version of #faf0ca
+
+  --bar-color: #7d5339; // Darker version of #fefae0
+
+  --border-in-light: 1px solid #baac7c; // Darker version of #8e7dbe
+
+  --theme-color: var(--gray);
+
+  div:not(.no-dark) > svg {
+    filter: invert(0.5);
+  }
 }
 
 .light {
@@ -77,6 +98,10 @@
 
 .nanciee {
   @include nanciee;
+}
+
+.nanciee-dark {
+  @include nanciee-dark;
 }
 
 .mask {
