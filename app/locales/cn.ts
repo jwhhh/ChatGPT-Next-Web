@@ -75,6 +75,7 @@ const cn = {
         auto: "自动主题",
         light: "亮色模式",
         dark: "深色模式",
+        nanciee: "南希主題",
       },
       Prompt: "快捷指令",
       Masks: "所有面具",

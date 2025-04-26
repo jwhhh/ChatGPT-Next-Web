@@ -34,6 +34,7 @@ export enum Theme {
   Auto = "auto",
   Dark = "dark",
   Light = "light",
+  Nanciee = "nanciee",
 }
 
 const config = getClientConfig();
